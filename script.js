@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeEnhancedSkills();
     initializeProjectDetails();
     initializeLighthouseAnimation();
-    initializeCookieConsent(); // <--- GDPR integration
+    //initializeCookieConsent(); // <--- GDPR integration
 });
 
 // Navigation functionality
@@ -534,7 +534,7 @@ function initializeProjectDetails() {
 // ===================================
 class ThemeManager {
     constructor() {
-        this.themeKey = 'theme'; // Simplified key
+        this.themeKey = 'theme';
         this.element = document.documentElement;
         this.themeToggle = null;
         this.sunIcon = null;
@@ -561,10 +561,11 @@ class ThemeManager {
             return;
         }
 
-        // Set the correct icon based on the theme already set by the inline script
-        this.updateThemeIcons(this.getCurrentTheme());
+        // FIX: Citește tema din inline script, nu suprascrie
+        const currentTheme = this.getCurrentTheme();
+        this.updateThemeIcons(currentTheme);
 
-        // Add event listener for toggling the theme
+        // Event listener pentru toggle
         this.themeToggle.addEventListener('click', () => this.toggleTheme());
 
         // Listen for system theme changes
@@ -602,6 +603,7 @@ class ThemeManager {
 
     updateThemeIcons(theme) {
         if (!this.sunIcon || !this.moonIcon) return;
+        
         if (theme === 'dark') {
             this.sunIcon.style.display = 'inline';
             this.moonIcon.style.display = 'none';
@@ -620,6 +622,7 @@ class ThemeManager {
 
     listenForSystemThemeChanges() {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            // Doar dacă nu există preferință salvată
             if (!this.getSavedTheme()) {
                 this.setTheme(e.matches ? 'dark' : 'light', false);
             }
@@ -627,7 +630,7 @@ class ThemeManager {
     }
 
     getCurrentTheme() {
-        return this.element.getAttribute('data-theme');
+        return this.element.getAttribute('data-theme') || 'light';
     }
 }
 
@@ -953,18 +956,7 @@ function getCookiePrefs() {
 // Alte scripturi existente pentru funcționalitatea site-ului tău
 // (nu trebuie mutate aici dacă sunt deja prezente în partea 1/2/3, codul tău de funcționalitate, animații, etc.)
 
-// Dacă folosești SW pentru PWA, nu uita să-l lași pe poziție!
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('SW registered: ', registration);
-      })
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
+
 
 
 // Language switching function for cookie popup

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Privacy Policy - Dragos Victor | Cybersecurity Professional</title>
-    <meta name="description" content="Privacy Policy for Dragos Victor's cybersecurity portfolio website. Learn how we protect and handle your personal information.">
+    <meta name="description"
+        content="Privacy Policy for Dragos Victor's cybersecurity portfolio website. Learn how we protect and handle your personal information.">
     <meta name="keywords" content="privacy policy, data protection, cybersecurity, personal information">
     <meta name="author" content="Dragos Victor">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Privacy Policy - Dragos Victor">
     <meta property="og:description" content="Privacy Policy for Dragos Victor's cybersecurity portfolio website.">
@@ -18,38 +20,69 @@
     <meta property="og:url" content="https://dragosvictor.tech/privacy-policy.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dragos Cyber Craft">
-    
+
+    <!-- ===== SECURITY HEADERS - ADAUGĂ AICI ===== -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;
+        media-src 'self';
+        object-src 'none';
+        frame-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;">
+        
+    <!-- HTTP Strict Transport Security -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+    <!-- Additional Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy"
+        content="geolocation=(), microphone=(), camera=(), midi=(), encrypted-media=(), usb=(), payment=(), vr=(), magnetometer=(), gyroscope=(), speaker=(), ambient-light-sensor=(), autoplay=(), fullscreen=(self)">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Immediate Theme Initialization to prevent flash -->
     <script>
-    (function () {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-        document.documentElement.setAttribute('data-theme', theme);
-    })();
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
     </script>
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <!-- CookieConsent CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
@@ -78,7 +111,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Progress Indicator -->
         <div class="progress-indicator" aria-hidden="true">
             <div class="progress-bar"></div>
@@ -106,15 +139,20 @@
                 <div class="privacy-content">
                     <div class="privacy-section">
                         <h2>Introduction</h2>
-                        <p>This Privacy Policy describes how Dragos Victor ("we," "our," or "us") collects, uses, and protects your personal information when you visit our website dragosvictor.tech (the "Service") operated by Dragos Victor.</p>
-                        <p>We are committed to protecting your privacy and ensuring the security of your personal information. This policy explains what information we collect, how we use it, and your rights regarding your personal data.</p>
+                        <p>This Privacy Policy describes how Dragos Victor ("we," "our," or "us") collects, uses, and
+                            protects your personal information when you visit our website dragosvictor.tech (the
+                            "Service") operated by Dragos Victor.</p>
+                        <p>We are committed to protecting your privacy and ensuring the security of your personal
+                            information. This policy explains what information we collect, how we use it, and your
+                            rights regarding your personal data.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Information We Collect</h2>
-                        
+
                         <h3>Personal Information</h3>
-                        <p>When you contact us through our contact form, we may collect the following personal information:</p>
+                        <p>When you contact us through our contact form, we may collect the following personal
+                            information:</p>
                         <ul>
                             <li>Name</li>
                             <li>Email address</li>
@@ -124,7 +162,8 @@
                         </ul>
 
                         <h3>Automatically Collected Information</h3>
-                        <p>When you visit our website, we may automatically collect certain information about your device and usage:</p>
+                        <p>When you visit our website, we may automatically collect certain information about your
+                            device and usage:</p>
                         <ul>
                             <li>IP address</li>
                             <li>Browser type and version</li>
@@ -139,44 +178,59 @@
                         <h2>How We Use Your Information</h2>
                         <p>We use the collected information for the following purposes:</p>
                         <ul>
-                            <li><strong>Communication:</strong> To respond to your inquiries and provide requested information about our cybersecurity services</li>
-                            <li><strong>Service Improvement:</strong> To understand how visitors use our website and improve our content and services</li>
-                            <li><strong>Analytics:</strong> To analyze website traffic and user behavior to enhance user experience</li>
+                            <li><strong>Communication:</strong> To respond to your inquiries and provide requested
+                                information about our cybersecurity services</li>
+                            <li><strong>Service Improvement:</strong> To understand how visitors use our website and
+                                improve our content and services</li>
+                            <li><strong>Analytics:</strong> To analyze website traffic and user behavior to enhance user
+                                experience</li>
                             <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
                         </ul>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Information Sharing and Disclosure</h2>
-                        <p>We do not sell, trade, or otherwise transfer your personal information to third parties, except in the following circumstances:</p>
+                        <p>We do not sell, trade, or otherwise transfer your personal information to third parties,
+                            except in the following circumstances:</p>
                         <ul>
-                            <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers (such as EmailJS for contact form processing) who assist us in operating our website</li>
-                            <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights, property, or safety</li>
-                            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction</li>
+                            <li><strong>Service Providers:</strong> We may share information with trusted third-party
+                                service providers (such as EmailJS for contact form processing) who assist us in
+                                operating our website</li>
+                            <li><strong>Legal Requirements:</strong> We may disclose information when required by law or
+                                to protect our rights, property, or safety</li>
+                            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of
+                                assets, your information may be transferred as part of that transaction</li>
                         </ul>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Data Security</h2>
-                        <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                        <p>We implement appropriate technical and organizational security measures to protect your
+                            personal information against unauthorized access, alteration, disclosure, or destruction.
+                            These measures include:</p>
                         <ul>
                             <li>Secure data transmission using HTTPS encryption</li>
                             <li>Regular security assessments and updates</li>
                             <li>Access controls and authentication measures</li>
                             <li>Data minimization practices</li>
                         </ul>
-                        <p>However, please note that no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+                        <p>However, please note that no method of transmission over the internet or electronic storage
+                            is 100% secure, and we cannot guarantee absolute security.</p>
                     </div>
 
                     <div class="privacy-section" id="cookies-section"> <!-- Added ID for Cookies Policy link -->
                         <h2>Cookies and Tracking Technologies</h2>
-                        <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience:</p>
+                        <p>Our website may use cookies and similar tracking technologies to enhance your browsing
+                            experience:</p>
                         <ul>
                             <li><strong>Essential Cookies:</strong> Necessary for the website to function properly</li>
-                            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website (Google Analytics)</li>
-                            <li><strong>Performance Cookies:</strong> Improve website performance and user experience</li>
+                            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our
+                                website (Google Analytics)</li>
+                            <li><strong>Performance Cookies:</strong> Improve website performance and user experience
+                            </li>
                         </ul>
-                        <p>You can control cookie settings through your browser preferences. However, disabling certain cookies may affect website functionality.</p>
+                        <p>You can control cookie settings through your browser preferences. However, disabling certain
+                            cookies may affect website functionality.</p>
                     </div>
 
                     <div class="privacy-section">
@@ -192,72 +246,93 @@
 
                     <div class="privacy-section">
                         <h2>Data Retention</h2>
-                        <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy:</p>
+                        <p>We retain your personal information only for as long as necessary to fulfill the purposes
+                            outlined in this Privacy Policy:</p>
                         <ul>
-                            <li><strong>Contact Form Data:</strong> Retained for up to 2 years for communication purposes</li>
-                            <li><strong>Analytics Data:</strong> Retained according to Google Analytics retention settings (typically 26 months)</li>
-                            <li><strong>Website Logs:</strong> Retained for up to 12 months for security and performance monitoring</li>
+                            <li><strong>Contact Form Data:</strong> Retained for up to 2 years for communication
+                                purposes</li>
+                            <li><strong>Analytics Data:</strong> Retained according to Google Analytics retention
+                                settings (typically 26 months)</li>
+                            <li><strong>Website Logs:</strong> Retained for up to 12 months for security and performance
+                                monitoring</li>
                         </ul>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Your Rights</h2>
-                        <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                        <p>Depending on your location, you may have the following rights regarding your personal
+                            information:</p>
                         <ul>
                             <li><strong>Access:</strong> Request access to your personal information we hold</li>
-                            <li><strong>Rectification:</strong> Request correction of inaccurate or incomplete information</li>
+                            <li><strong>Rectification:</strong> Request correction of inaccurate or incomplete
+                                information</li>
                             <li><strong>Erasure:</strong> Request deletion of your personal information</li>
-                            <li><strong>Portability:</strong> Request transfer of your data to another service provider</li>
+                            <li><strong>Portability:</strong> Request transfer of your data to another service provider
+                            </li>
                             <li><strong>Objection:</strong> Object to processing of your personal information</li>
-                            <li><strong>Restriction:</strong> Request restriction of processing under certain circumstances</li>
+                            <li><strong>Restriction:</strong> Request restriction of processing under certain
+                                circumstances</li>
                         </ul>
                         <p>To exercise these rights, please contact us using the information provided below.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Children's Privacy</h2>
-                        <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately.</p>
+                        <p>Our website is not intended for children under the age of 13. We do not knowingly collect
+                            personal information from children under 13. If you are a parent or guardian and believe
+                            your child has provided us with personal information, please contact us immediately.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>International Data Transfers</h2>
-                        <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards to protect your information.</p>
+                        <p>Your information may be transferred to and processed in countries other than your country of
+                            residence. We ensure that such transfers comply with applicable data protection laws and
+                            implement appropriate safeguards to protect your information.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Changes to This Privacy Policy</h2>
-                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any material changes by:</p>
+                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or
+                            applicable laws. We will notify you of any material changes by:</p>
                         <ul>
                             <li>Posting the updated policy on our website</li>
                             <li>Updating the "Last updated" date at the top of this policy</li>
-                            <li>Providing notice through our website or other communication channels when appropriate</li>
+                            <li>Providing notice through our website or other communication channels when appropriate
+                            </li>
                         </ul>
-                        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.</p>
+                        <p>We encourage you to review this Privacy Policy periodically to stay informed about how we
+                            protect your information.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Contact Information</h2>
-                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data
+                            practices, please contact us:</p>
                         <div class="contact-details">
                             <p><strong>Dragos Victor</strong><br>
-                            Cybersecurity Professional<br>
-                            Maidenhead, UK</p>
-                            
+                                Cybersecurity Professional<br>
+                                Maidenhead, UK</p>
+
                             <p><strong>Email:</strong> Use the contact form on our website<br>
-                            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dragos-nimerciag-9430b1274" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></p>
+                                <strong>LinkedIn:</strong> <a
+                                    href="https://www.linkedin.com/in/dragos-nimerciag-9430b1274" target="_blank"
+                                    rel="noopener noreferrer">Connect with me on LinkedIn</a>
+                            </p>
                         </div>
                         <p>We will respond to your inquiry within 30 days of receipt.</p>
                     </div>
 
                     <div class="privacy-section">
                         <h2>Compliance</h2>
-                        <p>This Privacy Policy is designed to comply with applicable data protection regulations, including:</p>
+                        <p>This Privacy Policy is designed to comply with applicable data protection regulations,
+                            including:</p>
                         <ul>
                             <li>General Data Protection Regulation (GDPR) - European Union</li>
                             <li>UK Data Protection Act 2018 - United Kingdom</li>
                             <li>California Consumer Privacy Act (CCPA) - California, USA</li>
                         </ul>
-                        <p>If you believe we have not complied with applicable data protection laws, you have the right to lodge a complaint with the relevant supervisory authority.</p>
+                        <p>If you believe we have not complied with applicable data protection laws, you have the right
+                            to lodge a complaint with the relevant supervisory authority.</p>
                     </div>
                 </div>
             </div>
@@ -268,7 +343,8 @@
             <div class="container">
                 <div class="cta-section">
                     <h2>Questions About Our Privacy Practices?</h2>
-                    <p>We're committed to transparency and protecting your privacy. Contact us if you have any questions or concerns.</p>
+                    <p>We're committed to transparency and protecting your privacy. Contact us if you have any questions
+                        or concerns.</p>
                     <div class="cta-buttons">
                         <a href="index.html#contact" class="cta-button primary">Contact Us</a>
                         <a href="index.html" class="cta-button secondary">Back to Home</a>
@@ -289,7 +365,8 @@
                 <p>Cybersecurity Professional</p>
                 <p>Maidenhead, UK</p>
                 <p><a href="privacy-policy.html">Privacy Policy</a></p>
-                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p> <!-- Added Cookies Policy link -->
+                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p>
+                <!-- Added Cookies Policy link -->
             </div>
         </div>
         <div class="footer-bottom">
@@ -302,34 +379,36 @@
 
     <!-- CookieConsent JS (with SRI) -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"
-            xintegrity="sha384-dI93GUaKCvC2wK2s0c/FFoN3Abl+DkPCV2Pj2A8sZGP1o2hT3pQ/mO4XnANJ1V9p" crossorigin="anonymous"></script>
+        xintegrity="sha384-dI93GUaKCvC2wK2s0c/FFoN3Abl+DkPCV2Pj2A8sZGP1o2hT3pQ/mO4XnANJ1V9p"
+        crossorigin="anonymous"></script>
     <script>
-    window.addEventListener("load", function(){
-      if (window.cookieconsent) { // Added check for window.cookieconsent
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#1a2236", /* Dark mode background for popup */
-              "text": "#e3f2fd"       /* Light mode text for popup */
-            },
-            "button": {
-              "background": "#90caf9", /* Light blue for button */
-              "text": "#1a2236"       /* Dark text for button */
+        window.addEventListener("load", function () {
+            if (window.cookieconsent) { // Added check for window.cookieconsent
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#1a2236", /* Dark mode background for popup */
+                            "text": "#e3f2fd"       /* Light mode text for popup */
+                        },
+                        "button": {
+                            "background": "#90caf9", /* Light blue for button */
+                            "text": "#1a2236"       /* Dark text for button */
+                        }
+                    },
+                    "theme": "edgeless",
+                    "position": "bottom",
+                    "content": {
+                        "message": "Acest site utilizează cookie-uri pentru a asigura o experiență optimă de navigare. Prin continuarea utilizării site-ului, sunteți de acord cu utilizarea cookie-urilor.",
+                        "dismiss": "Am înțeles!",
+                        "link": "Politica de Confidențialitate",
+                        "href": "privacy-policy.html#cookies-section"
+                    }
+                });
+            } else {
+                console.error("CookieConsent library (window.cookieconsent) is not defined. Cookie consent banner may not display.");
             }
-          },
-          "theme": "edgeless",
-          "position": "bottom",
-          "content": {
-            "message": "Acest site utilizează cookie-uri pentru a asigura o experiență optimă de navigare. Prin continuarea utilizării site-ului, sunteți de acord cu utilizarea cookie-urilor.",
-            "dismiss": "Am înțeles!",
-            "link": "Politica de Confidențialitate",
-            "href": "privacy-policy.html#cookies-section"
-          }
         });
-      } else {
-        console.error("CookieConsent library (window.cookieconsent) is not defined. Cookie consent banner may not display.");
-      }
-    });
     </script>
 </body>
+
 </html>

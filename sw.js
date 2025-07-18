@@ -13,7 +13,7 @@ const urlsToCache = [
     '/assets/favicon.ico', // Inclus chiar dacă este gol, ar trebui înlocuit cu un fișier valid
     '/assets/apple-touch-icon.png',
     '/assets/hexagon-pattern.jpg',
-    '/assets/cybersecurity_shield_background.png'
+    '/assets/cybersecurity-shield-background.png'
 ];
 
 // Install event - cache resources

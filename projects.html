@@ -1,44 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Projects - Dragos Victor | Cybersecurity Case Studies & Portfolio</title>
-    <meta name="description" content="Explore detailed cybersecurity projects and case studies by Dragos Victor. Real-world security implementations, vulnerability assessments, and penetration testing results.">
-    <meta name="keywords" content="cybersecurity projects, case studies, penetration testing, vulnerability assessment, security implementation, portfolio">
+    <meta name="description"
+        content="Explore detailed cybersecurity projects and case studies by Dragos Victor. Real-world security implementations, vulnerability assessments, and penetration testing results.">
+    <meta name="keywords"
+        content="cybersecurity projects, case studies, penetration testing, vulnerability assessment, security implementation, portfolio">
     <meta name="author" content="Dragos Victor">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Projects - Dragos Victor Cybersecurity Portfolio">
-    <meta property="og:description" content="Detailed cybersecurity projects and case studies showcasing real-world security implementations and assessments.">
+    <meta property="og:description"
+        content="Detailed cybersecurity projects and case studies showcasing real-world security implementations and assessments.">
     <meta property="og:image" content="assets/CR__9822.jpg">
     <meta property="og:url" content="https://dragosvictor.tech/projects.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dragos Cyber Craft">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projects - Dragos Victor Cybersecurity Portfolio">
-    <meta name="twitter:description" content="Detailed cybersecurity projects and case studies showcasing real-world security implementations.">
+    <meta name="twitter:description"
+        content="Detailed cybersecurity projects and case studies showcasing real-world security implementations.">
     <meta name="twitter:image" content="assets/CR__9822.jpg">
-    
+
+    <!-- ===== SECURITY HEADERS - ADAUGĂ AICI ===== -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;
+        media-src 'self';
+        object-src 'none';
+        frame-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;">
+        
+    <!-- HTTP Strict Transport Security -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+    <!-- Additional Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy"
+        content="geolocation=(), microphone=(), camera=(), midi=(), encrypted-media=(), usb=(), payment=(), vr=(), magnetometer=(), gyroscope=(), speaker=(), ambient-light-sensor=(), autoplay=(), fullscreen=(self)">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Immediate Theme Initialization to prevent flash -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -54,15 +98,16 @@
         }
     }
     </script>
-    
+
     <!-- Performance Optimization -->
-    <link rel="preload" href="assets/CR__9822.jpg" as="image">
+    
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
@@ -91,7 +136,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Progress Indicator -->
         <div class="progress-indicator" aria-hidden="true">
             <div class="progress-bar"></div>
@@ -125,15 +170,18 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Project Portfolio</h2>
-                    <p class="section-subtitle">Detailed case studies showcasing cybersecurity expertise across various domains and industries</p>
+                    <p class="section-subtitle">Detailed case studies showcasing cybersecurity expertise across various
+                        domains and industries</p>
                 </div>
 
-                    <!-- Project Categories -->
+                <!-- Project Categories -->
                 <div class="project-categories">
                     <button class="category-filter active" data-category="all">All Projects</button>
                     <button class="category-filter" data-category="penetration-testing">Penetration Testing</button>
-                    <button class="category-filter" data-category="vulnerability-assessment">Vulnerability Assessment</button>
-                    <button class="category-filter" data-category="security-implementation">Security Implementation</button>
+                    <button class="category-filter" data-category="vulnerability-assessment">Vulnerability
+                        Assessment</button>
+                    <button class="category-filter" data-category="security-implementation">Security
+                        Implementation</button>
                     <button class="category-filter" data-category="automation">Security Automation</button>
                     <button class="category-filter" data-category="iot-development">IoT Development</button>
                     <button class="category-filter" data-category="data-science">Data Science</button>
@@ -157,7 +205,9 @@
                                 <span class="project-date">2024</span>
                             </div>
                             <h3 class="project-title">Small Business Security Assessment</h3>
-                            <p class="project-summary">Comprehensive security evaluation for a 50-employee financial services company, identifying critical vulnerabilities and implementing robust security measures.</p>
+                            <p class="project-summary">Comprehensive security evaluation for a 50-employee financial
+                                services company, identifying critical vulnerabilities and implementing robust security
+                                measures.</p>
                             <div class="project-tags">
                                 <span class="tag">Network Security</span>
                                 <span class="tag">Risk Assessment</span>
@@ -168,7 +218,8 @@
                                 <h4>Project Overview</h4>
                                 <p><strong>Client:</strong> 50-employee financial services company</p>
                                 <p><strong>Duration:</strong> 3 weeks</p>
-                                <p><strong>Scope:</strong> Complete security assessment including network, applications, and policies</p>
+                                <p><strong>Scope:</strong> Complete security assessment including network, applications,
+                                    and policies</p>
                                 <h4>Key Achievements</h4>
                                 <ul>
                                     <li>Identified 15 critical vulnerabilities across network infrastructure</li>
@@ -195,7 +246,8 @@
                                 <span class="project-date">2024</span>
                             </div>
                             <h3 class="project-title">Automated Security Monitoring System</h3>
-                            <p class="project-summary">Python-based automation solution that reduced manual security monitoring tasks by 40% while improving threat detection accuracy.</p>
+                            <p class="project-summary">Python-based automation solution that reduced manual security
+                                monitoring tasks by 40% while improving threat detection accuracy.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">SIEM</span>
@@ -204,7 +256,8 @@
                             <a href="#" class="project-link" data-project-id="project-2">View Summary</a>
                             <div class="project-details" id="project-2" style="display: none;">
                                 <h4>Project Overview</h4>
-                                <p><strong>Objective:</strong> Automate security monitoring and reduce manual workload</p>
+                                <p><strong>Objective:</strong> Automate security monitoring and reduce manual workload
+                                </p>
                                 <p><strong>Duration:</strong> 2 months</p>
                                 <p><strong>Environment:</strong> Enterprise network with 200+ endpoints</p>
                                 <h4>Key Achievements</h4>
@@ -235,7 +288,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">E-commerce Platform Penetration Test</h3>
-                            <p class="project-summary">Comprehensive penetration testing of an e-commerce platform, uncovering critical vulnerabilities and providing detailed remediation strategies.</p>
+                            <p class="project-summary">Comprehensive penetration testing of an e-commerce platform,
+                                uncovering critical vulnerabilities and providing detailed remediation strategies.</p>
                             <div class="project-tags">
                                 <span class="tag">Web Security</span>
                                 <span class="tag">OWASP</span>
@@ -258,7 +312,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">AWS Cloud Solutions for E-Commerce: Fusion Limited</h3>
-                            <p class="project-summary">Assessed and deployed AWS services for secure e-commerce hosting, including IAM, EC2, RDS, and GuardDuty implementation.</p>
+                            <p class="project-summary">Assessed and deployed AWS services for secure e-commerce hosting,
+                                including IAM, EC2, RDS, and GuardDuty implementation.</p>
                             <div class="project-tags">
                                 <span class="tag">AWS</span>
                                 <span class="tag">IAM</span>
@@ -282,7 +337,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">Smart IoT Home Automation & Security System</h3>
-                            <p class="project-summary">Developed home automation system with I2C integration of multiple sensors for remote lighting control and security monitoring.</p>
+                            <p class="project-summary">Developed home automation system with I2C integration of multiple
+                                sensors for remote lighting control and security monitoring.</p>
                             <div class="project-tags">
                                 <span class="tag">Arduino</span>
                                 <span class="tag">IoT</span>
@@ -306,7 +362,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">Smart Locker IoT System & Protocol Analysis</h3>
-                            <p class="project-summary">Arduino-based smart locker with IoT protocols exploration including MQTT, CoAP, and LoRaWAN communication.</p>
+                            <p class="project-summary">Arduino-based smart locker with IoT protocols exploration
+                                including MQTT, CoAP, and LoRaWAN communication.</p>
                             <div class="project-tags">
                                 <span class="tag">Arduino</span>
                                 <span class="tag">MQTT</span>
@@ -330,7 +387,8 @@
                                 <span class="project-date">2021</span>
                             </div>
                             <h3 class="project-title">Price-cut.co.uk: Enterprise Network Design</h3>
-                            <p class="project-summary">Designed Cisco enterprise network with core/distribution/access layers, IoT integration, and comprehensive security planning.</p>
+                            <p class="project-summary">Designed Cisco enterprise network with core/distribution/access
+                                layers, IoT integration, and comprehensive security planning.</p>
                             <div class="project-tags">
                                 <span class="tag">Cisco</span>
                                 <span class="tag">VLAN</span>
@@ -354,7 +412,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">Real-World Data Analytics Project</h3>
-                            <p class="project-summary">Group project using Python/Jupyter for comprehensive data analysis including CO2 emissions and Mercedes sales data.</p>
+                            <p class="project-summary">Group project using Python/Jupyter for comprehensive data
+                                analysis including CO2 emissions and Mercedes sales data.</p>
                             <div class="project-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">Jupyter</span>
@@ -378,7 +437,8 @@
                                 <span class="project-date">2023</span>
                             </div>
                             <h3 class="project-title">For Foodies by Foodies (FFBF) – Mobile App</h3>
-                            <p class="project-summary">Android application for food discovery and review with Firebase backend, featuring multi-role authentication and MVVM architecture.</p>
+                            <p class="project-summary">Android application for food discovery and review with Firebase
+                                backend, featuring multi-role authentication and MVVM architecture.</p>
                             <div class="project-tags">
                                 <span class="tag">Android</span>
                                 <span class="tag">Java</span>
@@ -414,13 +474,17 @@
                     <div class="case-study-content">
                         <div class="case-study-section">
                             <h4>Challenge</h4>
-                            <p>A 50-employee financial services company needed a comprehensive security assessment to meet regulatory compliance requirements and protect sensitive client data. The organization had grown rapidly but lacked formal cybersecurity policies and procedures.</p>
+                            <p>A 50-employee financial services company needed a comprehensive security assessment to
+                                meet regulatory compliance requirements and protect sensitive client data. The
+                                organization had grown rapidly but lacked formal cybersecurity policies and procedures.
+                            </p>
                         </div>
 
                         <div class="case-study-section">
                             <h4>Approach</h4>
                             <ul class="case-study-list">
-                                <li>Conducted comprehensive network vulnerability scanning using industry-standard tools</li>
+                                <li>Conducted comprehensive network vulnerability scanning using industry-standard tools
+                                </li>
                                 <li>Performed social engineering assessment to evaluate employee security awareness</li>
                                 <li>Reviewed existing security policies and procedures</li>
                                 <li>Analyzed access controls and user privilege management</li>
@@ -488,7 +552,9 @@
                     <div class="case-study-content">
                         <div class="case-study-section">
                             <h4>Challenge</h4>
-                            <p>A rapidly growing technology startup needed to scale their security monitoring capabilities without significantly increasing operational overhead. Manual log analysis was becoming unsustainable as the infrastructure grew.</p>
+                            <p>A rapidly growing technology startup needed to scale their security monitoring
+                                capabilities without significantly increasing operational overhead. Manual log analysis
+                                was becoming unsustainable as the infrastructure grew.</p>
                         </div>
 
                         <div class="case-study-section">
@@ -504,7 +570,9 @@
 
                         <div class="case-study-section">
                             <h4>Technical Implementation</h4>
-                            <p>The solution utilized Python's powerful data processing libraries to parse and analyze security logs from multiple sources. Machine learning algorithms were implemented to identify anomalous patterns and potential security threats.</p>
+                            <p>The solution utilized Python's powerful data processing libraries to parse and analyze
+                                security logs from multiple sources. Machine learning algorithms were implemented to
+                                identify anomalous patterns and potential security threats.</p>
                         </div>
 
                         <div class="case-study-section">
@@ -538,7 +606,8 @@
             <div class="container">
                 <div class="cta-section">
                     <h2>Ready to Secure Your Organization?</h2>
-                    <p>Let's discuss how these proven methodologies can be applied to your specific security challenges.</p>
+                    <p>Let's discuss how these proven methodologies can be applied to your specific security challenges.
+                    </p>
                     <div class="cta-buttons">
                         <a href="index.html#contact" class="cta-button primary">Get In Touch</a>
                         <a href="blog.html" class="cta-button secondary">Read Security Insights</a>
@@ -559,67 +628,70 @@
                 <p>Cybersecurity Professional</p>
                 <p>Maidenhead, UK</p>
                 <p><a href="privacy-policy.html">Privacy Policy</a></p>
-                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p> <!-- Added Cookies Policy link -->
+                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p>
+                <!-- Added Cookies Policy link -->
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Dragos Victor. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <!-- Cookie Consent Popup -->
     <div id="cookie-popup" class="cookie-popup" style="display: none;">
-      <div class="cookie-popup-content">
-        <h3>Setări cookie-uri</h3>
-        <p>Acest site folosește cookie-uri pentru funcționare și pentru a analiza traficul. Poți alege ce categorii de cookie-uri accepți:</p>
-        <form id="cookie-form">
-          <div class="cookie-category">
-            <input type="checkbox" id="cookie-strict" checked disabled>
-            <label for="cookie-strict"><b>Strict necesare</b> (obligatorii)</label>
-            <p class="cookie-desc">Necesare pentru funcționarea site-ului. Nu pot fi dezactivate.</p>
-          </div>
-          <div class="cookie-category">
-            <input type="checkbox" id="cookie-analytics">
-            <label for="cookie-analytics"><b>Analiză & Statistici</b></label>
-            <p class="cookie-desc">Ex: Google Analytics. Ne ajută să înțelegem cum este folosit site-ul.</p>
-          </div>
-          <div class="cookie-category">
-            <input type="checkbox" id="cookie-marketing">
-            <label for="cookie-marketing"><b>Marketing</b></label>
-            <p class="cookie-desc">Ex: Facebook Pixel, remarketing, reclame personalizate.</p>
-          </div>
-          <div class="cookie-category">
-            <input type="checkbox" id="cookie-personalization">
-            <label for="cookie-personalization"><b>Personalizare</b></label>
-            <p class="cookie-desc">Ex: salvarea preferințelor vizitatorului.</p>
-          </div>
-          <div class="cookie-actions">
-            <button type="button" id="accept-all-cookies" class="cookie-btn primary">Acceptă toate</button>
-            <button type="submit" class="cookie-btn">Salvează preferințele</button>
-          </div>
-        </form>
-        <div class="cookie-link">
-          <a href="privacy-policy.html" target="_blank">Vezi politica de confidențialitate</a>
+        <div class="cookie-popup-content">
+            <h3>Setări cookie-uri</h3>
+            <p>Acest site folosește cookie-uri pentru funcționare și pentru a analiza traficul. Poți alege ce categorii
+                de cookie-uri accepți:</p>
+            <form id="cookie-form">
+                <div class="cookie-category">
+                    <input type="checkbox" id="cookie-strict" checked disabled>
+                    <label for="cookie-strict"><b>Strict necesare</b> (obligatorii)</label>
+                    <p class="cookie-desc">Necesare pentru funcționarea site-ului. Nu pot fi dezactivate.</p>
+                </div>
+                <div class="cookie-category">
+                    <input type="checkbox" id="cookie-analytics">
+                    <label for="cookie-analytics"><b>Analiză & Statistici</b></label>
+                    <p class="cookie-desc">Ex: Google Analytics. Ne ajută să înțelegem cum este folosit site-ul.</p>
+                </div>
+                <div class="cookie-category">
+                    <input type="checkbox" id="cookie-marketing">
+                    <label for="cookie-marketing"><b>Marketing</b></label>
+                    <p class="cookie-desc">Ex: Facebook Pixel, remarketing, reclame personalizate.</p>
+                </div>
+                <div class="cookie-category">
+                    <input type="checkbox" id="cookie-personalization">
+                    <label for="cookie-personalization"><b>Personalizare</b></label>
+                    <p class="cookie-desc">Ex: salvarea preferințelor vizitatorului.</p>
+                </div>
+                <div class="cookie-actions">
+                    <button type="button" id="accept-all-cookies" class="cookie-btn primary">Acceptă toate</button>
+                    <button type="submit" class="cookie-btn">Salvează preferințele</button>
+                </div>
+            </form>
+            <div class="cookie-link">
+                <a href="privacy-policy.html" target="_blank">Vezi politica de confidențialitate</a>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    
+
     <!-- Google Analytics (conditionally loaded) -->
     <script>
-      function startGoogleAnalytics() {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7K8YWCQ2P7';
-        document.head.appendChild(script);
+        function startGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7K8YWCQ2P7';
+            document.head.appendChild(script);
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-7K8YWCQ2P7');
-      }
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-7K8YWCQ2P7');
+        }
     </script>
 </body>
+
 </html>

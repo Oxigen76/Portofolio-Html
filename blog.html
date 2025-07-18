@@ -1,47 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Blog - Dragos Victor | Cybersecurity Insights & Analysis</title>
-    <meta name="description" content="Expert cybersecurity insights, threat analysis, and security best practices by Dragos Victor. Stay informed about the latest cybersecurity trends and techniques.">
-    <meta name="keywords" content="cybersecurity blog, security insights, threat analysis, penetration testing, vulnerability assessment, security best practices">
+    <meta name="description"
+        content="Expert cybersecurity insights, threat analysis, and security best practices by Dragos Victor. Stay informed about the latest cybersecurity trends and techniques.">
+    <meta name="keywords"
+        content="cybersecurity blog, security insights, threat analysis, penetration testing, vulnerability assessment, security best practices">
     <meta name="author" content="Dragos Victor">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Blog - Dragos Victor Cybersecurity Insights">
-    <meta property="og:description" content="Expert cybersecurity insights, threat analysis, and security best practices from a professional cybersecurity consultant.">
+    <meta property="og:description"
+        content="Expert cybersecurity insights, threat analysis, and security best practices from a professional cybersecurity consultant.">
     <meta property="og:image" content="assets/CR__9822.jpg">
     <meta property="og:url" content="https://dragosvictor.tech/blog.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dragos Cyber Craft">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog - Dragos Victor Cybersecurity Insights">
-    <meta name="twitter:description" content="Expert cybersecurity insights and analysis from a professional security consultant.">
+    <meta name="twitter:description"
+        content="Expert cybersecurity insights and analysis from a professional security consultant.">
     <meta name="twitter:image" content="assets/CR__9822.jpg">
-    
+
+    <!-- ===== SECURITY HEADERS - ADAUGĂ AICI ===== -->
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';
+        script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://cdnjs.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com;
+        media-src 'self';
+        object-src 'none';
+        frame-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;">
+    <!-- HTTP Strict Transport Security -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+    <!-- Additional Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy"
+        content="geolocation=(), microphone=(), camera=(), midi=(), encrypted-media=(), usb=(), payment=(), vr=(), magnetometer=(), gyroscope=(), speaker=(), ambient-light-sensor=(), autoplay=(), fullscreen=(self)">
+
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Immediate Theme Initialization to prevent flash -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <!-- CookieConsent CSS -->
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-    
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -57,15 +101,16 @@
         }
     }
     </script>
-    
+
     <!-- Performance Optimization -->
-    <link rel="preload" href="assets/CR__9822.jpg" as="image">
+    
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
 </head>
+
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
@@ -94,7 +139,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Progress Indicator -->
         <div class="progress-indicator" aria-hidden="true">
             <div class="progress-bar"></div>
@@ -143,8 +188,13 @@
                             <span class="article-date">December 2024</span>
                             <span class="article-read-time">8 min read</span>
                         </div>
-                        <h3 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double Extortion</h3>
-                        <p class="article-excerpt">An in-depth analysis of how ransomware attacks have evolved over the past decade, examining the shift from basic file encryption to sophisticated double extortion schemes that combine data theft with encryption. This comprehensive study explores real-world case studies and provides actionable defense strategies for organizations of all sizes.</p>
+                        <h3 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double
+                            Extortion</h3>
+                        <p class="article-excerpt">An in-depth analysis of how ransomware attacks have evolved over the
+                            past decade, examining the shift from basic file encryption to sophisticated double
+                            extortion schemes that combine data theft with encryption. This comprehensive study explores
+                            real-world case studies and provides actionable defense strategies for organizations of all
+                            sizes.</p>
                         <div class="article-tags">
                             <span class="tag">Ransomware</span>
                             <span class="tag">Threat Intelligence</span>
@@ -227,8 +277,11 @@
                                 <span class="article-category">Threat Analysis</span>
                                 <span class="article-date">January 2025</span>
                             </div>
-                            <h3 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double Extortion</h3>
-                            <p class="article-excerpt">A comprehensive analysis of ransomware's evolution from the 1989 AIDS Trojan to modern double extortion tactics, exploring the technical progression and strategic shifts in cybercrime.</p>
+                            <h3 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double
+                                Extortion</h3>
+                            <p class="article-excerpt">A comprehensive analysis of ransomware's evolution from the 1989
+                                AIDS Trojan to modern double extortion tactics, exploring the technical progression and
+                                strategic shifts in cybercrime.</p>
                             <div class="article-tags">
                                 <span class="tag">Ransomware</span>
                                 <span class="tag">Threat Analysis</span>
@@ -251,8 +304,11 @@
                                 <span class="article-category">Best Practices</span>
                                 <span class="article-date">November 2024</span>
                             </div>
-                            <h3 class="article-title">Zero Trust Architecture: Implementation Strategies for Small Businesses</h3>
-                            <p class="article-excerpt">A practical guide to implementing Zero Trust principles in resource-constrained environments, with step-by-step implementation strategies and cost-effective solutions.</p>
+                            <h3 class="article-title">Zero Trust Architecture: Implementation Strategies for Small
+                                Businesses</h3>
+                            <p class="article-excerpt">A practical guide to implementing Zero Trust principles in
+                                resource-constrained environments, with step-by-step implementation strategies and
+                                cost-effective solutions.</p>
                             <div class="article-tags">
                                 <span class="tag">Zero Trust</span>
                                 <span class="tag">Small Business</span>
@@ -274,7 +330,9 @@
                                 <span class="article-date">October 2024</span>
                             </div>
                             <h3 class="article-title">Python for Cybersecurity: Building Custom Security Tools</h3>
-                            <p class="article-summary">Learn how to leverage Python's powerful libraries to create custom security tools for vulnerability scanning, log analysis, and threat detection.</p>
+                            <p class="article-summary">Learn how to leverage Python's powerful libraries to create
+                                custom security tools for vulnerability scanning, log analysis, and threat detection.
+                            </p>
                             <div class="article-tags">
                                 <span class="tag">Python</span>
                                 <span class="tag">Tool Development</span>
@@ -295,8 +353,10 @@
                                 <span class="article-category">SIEM</span>
                                 <span class="article-date">September 2024</span>
                             </div>
-                            <h3 class="article-title">SIEM Optimization: Reducing False Positives and Improving Detection</h3>
-                            <p class="article-summary">Advanced techniques for fine-tuning SIEM systems to reduce alert fatigue while maintaining high detection accuracy for genuine security threats.</p>
+                            <h3 class="article-title">SIEM Optimization: Reducing False Positives and Improving
+                                Detection</h3>
+                            <p class="article-summary">Advanced techniques for fine-tuning SIEM systems to reduce alert
+                                fatigue while maintaining high detection accuracy for genuine security threats.</p>
                             <div class="article-tags">
                                 <span class="tag">SIEM</span>
                                 <span class="tag">Optimization</span>
@@ -318,7 +378,9 @@
                                 <span class="article-date">August 2024</span>
                             </div>
                             <h3 class="article-title">Network Segmentation Best Practices for Enhanced Security</h3>
-                            <p class="article-summary">Comprehensive guide to implementing effective network segmentation strategies that limit attack surface and contain potential security breaches.</p>
+                            <p class="article-summary">Comprehensive guide to implementing effective network
+                                segmentation strategies that limit attack surface and contain potential security
+                                breaches.</p>
                             <div class="article-tags">
                                 <span class="tag">Network Security</span>
                                 <span class="tag">Segmentation</span>
@@ -340,7 +402,9 @@
                                 <span class="article-date">July 2024</span>
                             </div>
                             <h3 class="article-title">Security Awareness Training: Beyond the Basics</h3>
-                            <p class="article-summary">Advanced strategies for creating effective security awareness programs that actually change employee behavior and reduce human-factor security risks.</p>
+                            <p class="article-summary">Advanced strategies for creating effective security awareness
+                                programs that actually change employee behavior and reduce human-factor security risks.
+                            </p>
                             <div class="article-tags">
                                 <span class="tag">Training</span>
                                 <span class="tag">Human Factor</span>
@@ -362,7 +426,9 @@
                                 <span class="article-date">June 2024</span>
                             </div>
                             <h3 class="article-title">Rapid Response: First 24 Hours of a Security Incident</h3>
-                            <p class="article-summary">Critical steps and decision-making frameworks for the crucial first 24 hours of a cybersecurity incident, based on real-world experience and industry best practices.</p>
+                            <p class="article-summary">Critical steps and decision-making frameworks for the crucial
+                                first 24 hours of a cybersecurity incident, based on real-world experience and industry
+                                best practices.</p>
                             <div class="article-tags">
                                 <span class="tag">Incident Response</span>
                                 <span class="tag">Crisis Management</span>
@@ -389,7 +455,8 @@
                         <input type="email" placeholder="Enter your email address" required>
                         <button type="submit">Subscribe</button>
                     </form>
-                    <p class="newsletter-disclaimer">No spam, unsubscribe at any time. Read our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+                    <p class="newsletter-disclaimer">No spam, unsubscribe at any time. Read our <a
+                            href="privacy-policy.html">Privacy Policy</a>.</p>
                 </div>
             </div>
         </section>
@@ -399,7 +466,8 @@
             <div class="container">
                 <div class="cta-section">
                     <h2>Need Expert Cybersecurity Guidance?</h2>
-                    <p>Let's discuss how these insights can be applied to strengthen your organization's security posture.</p>
+                    <p>Let's discuss how these insights can be applied to strengthen your organization's security
+                        posture.</p>
                     <div class="cta-buttons">
                         <a href="index.html#contact" class="cta-button primary">Get In Touch</a>
                         <a href="projects.html" class="cta-button secondary">View Case Studies</a>
@@ -417,7 +485,8 @@
                         <span class="article-date">January 2025</span>
                         <span class="reading-time">15 min read</span>
                     </div>
-                    <h1 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double Extortion</h1>
+                    <h1 class="article-title">The Evolution of Ransomware: From Simple Encryption to Double Extortion
+                    </h1>
                     <div class="article-tags">
                         <span class="tag">Ransomware</span>
                         <span class="tag">Threat Analysis</span>
@@ -428,13 +497,25 @@
 
                 <div class="article-content">
                     <div class="article-intro">
-                        <p class="lead">Ransomware represents a pervasive and evolving threat within the cybersecurity landscape, posing significant challenges to individuals, organizations, and governments worldwide. This comprehensive analysis explores the technical progression and strategic shifts that have transformed ransomware from simple file encryption to sophisticated double extortion tactics.</p>
+                        <p class="lead">Ransomware represents a pervasive and evolving threat within the cybersecurity
+                            landscape, posing significant challenges to individuals, organizations, and governments
+                            worldwide. This comprehensive analysis explores the technical progression and strategic
+                            shifts that have transformed ransomware from simple file encryption to sophisticated double
+                            extortion tactics.</p>
                     </div>
 
                     <h2>Introduction: The Relentless Ascent of Cyber Extortion</h2>
-                    <p>At its core, ransomware is a malicious software designed to encrypt files and systems, rendering them inaccessible to users, and subsequently demands a payment, or "ransom," in exchange for the decryption key. This form of cyberattack is both invasive and costly, fundamentally disrupting access to crucial information and IT systems. The primary motivation behind these attacks is financial gain, coercing victims into paying to restore their digital operations.</p>
+                    <p>At its core, ransomware is a malicious software designed to encrypt files and systems, rendering
+                        them inaccessible to users, and subsequently demands a payment, or "ransom," in exchange for the
+                        decryption key. This form of cyberattack is both invasive and costly, fundamentally disrupting
+                        access to crucial information and IT systems. The primary motivation behind these attacks is
+                        financial gain, coercing victims into paying to restore their digital operations.</p>
 
-                    <p>The global proliferation of ransomware has reached unprecedented levels, with organizations across 153 countries falling victim to these attacks in recent years. The financial ramifications are substantial, with estimated global damages projected to exceed $20 billion in 2021. The persistent and advancing nature of ransomware means that malicious software continuously evolves, presenting an ongoing challenge to mitigation efforts.</p>
+                    <p>The global proliferation of ransomware has reached unprecedented levels, with organizations
+                        across 153 countries falling victim to these attacks in recent years. The financial
+                        ramifications are substantial, with estimated global damages projected to exceed $20 billion in
+                        2021. The persistent and advancing nature of ransomware means that malicious software
+                        continuously evolves, presenting an ongoing challenge to mitigation efforts.</p>
 
                     <div class="highlight-box">
                         <h3>Key Statistics</h3>
@@ -445,62 +526,115 @@
                         </ul>
                     </div>
 
-                    <p>Encryption has always been central to ransomware's efficacy. This vital security feature is exploited by ransomware to hold data hostage, making it unreadable without the specific decryption key. Over time, the cryptographic techniques employed have become increasingly sophisticated, transitioning from simple symmetric methods to complex hybrid encryption strategies. This technical progression has been a key driver in ransomware's historical trajectory, enabling its transformation from rudimentary file locking to multi-faceted data theft and extortion.</p>
+                    <p>Encryption has always been central to ransomware's efficacy. This vital security feature is
+                        exploited by ransomware to hold data hostage, making it unreadable without the specific
+                        decryption key. Over time, the cryptographic techniques employed have become increasingly
+                        sophisticated, transitioning from simple symmetric methods to complex hybrid encryption
+                        strategies. This technical progression has been a key driver in ransomware's historical
+                        trajectory, enabling its transformation from rudimentary file locking to multi-faceted data
+                        theft and extortion.</p>
 
                     <h2>Chapter 1: The Dawn of Digital Hostage-Taking: Simple Encryption</h2>
-                    <p>The origins of ransomware trace back to the nascent stages of digital connectivity, laying the groundwork for the sophisticated threats observed in the contemporary cybersecurity landscape. The foundational elements of ransomware, though rudimentary, established the core principle of digital extortion.</p>
+                    <p>The origins of ransomware trace back to the nascent stages of digital connectivity, laying the
+                        groundwork for the sophisticated threats observed in the contemporary cybersecurity landscape.
+                        The foundational elements of ransomware, though rudimentary, established the core principle of
+                        digital extortion.</p>
 
                     <h3>The AIDS Trojan (1989): Symmetric Encryption and Rudimentary Extortion</h3>
-                    <p>The first documented instance of ransomware is widely recognized as the AIDS Trojan, also known as PC Cyborg, which emerged in 1989. This pioneering attack was distributed via floppy disks, targeting a subscriber list from a World Health Organization AIDS conference. Upon execution, the malware employed a simple symmetric encryption algorithm to render victims' data inaccessible.</p>
+                    <p>The first documented instance of ransomware is widely recognized as the AIDS Trojan, also known
+                        as PC Cyborg, which emerged in 1989. This pioneering attack was distributed via floppy disks,
+                        targeting a subscriber list from a World Health Organization AIDS conference. Upon execution,
+                        the malware employed a simple symmetric encryption algorithm to render victims' data
+                        inaccessible.</p>
 
                     <div class="technical-note">
                         <h4>Technical Detail: Symmetric Encryption</h4>
-                        <p>Symmetric encryption is characterized by the use of a single, identical key for both the encryption and decryption processes. While efficient, this approach has inherent vulnerabilities when used maliciously.</p>
+                        <p>Symmetric encryption is characterized by the use of a single, identical key for both the
+                            encryption and decryption processes. While efficient, this approach has inherent
+                            vulnerabilities when used maliciously.</p>
                     </div>
 
-                    <p>To regain access to their files, victims were instructed to mail a payment of $189 to a post office box located in Panama. While groundbreaking for its time, the AIDS Trojan was considered archaic by modern standards. Its primary limitation stemmed from its method of encryption, which primarily affected file names rather than their actual content, making it relatively easy to identify and reverse. Furthermore, the reliance on physical mail for ransom payments presented significant logistical challenges, hindering its effectiveness as a widespread extortion tool.</p>
+                    <p>To regain access to their files, victims were instructed to mail a payment of $189 to a post
+                        office box located in Panama. While groundbreaking for its time, the AIDS Trojan was considered
+                        archaic by modern standards. Its primary limitation stemmed from its method of encryption, which
+                        primarily affected file names rather than their actual content, making it relatively easy to
+                        identify and reverse. Furthermore, the reliance on physical mail for ransom payments presented
+                        significant logistical challenges, hindering its effectiveness as a widespread extortion tool.
+                    </p>
 
-                    <p>Despite its limited economic impact, the AIDS Trojan served as an early warning of the potential for malware to be used for digital extortion. The AIDS Trojan, despite its primitive nature, represented a foundational step in the weaponization of digital systems for financial gain. Its simple symmetric encryption, while easily defeated, demonstrated the core concept of holding data hostage.</p>
+                    <p>Despite its limited economic impact, the AIDS Trojan served as an early warning of the potential
+                        for malware to be used for digital extortion. The AIDS Trojan, despite its primitive nature,
+                        represented a foundational step in the weaponization of digital systems for financial gain. Its
+                        simple symmetric encryption, while easily defeated, demonstrated the core concept of holding
+                        data hostage.</p>
 
                     <h3>The Theoretical Foundation: Cryptovirology and the Young & Yung Protocol (1996)</h3>
-                    <p>A pivotal theoretical development that profoundly influenced the trajectory of ransomware was the concept of cryptovirology, introduced by Adam Young and Moti Yung. They presented their groundbreaking work on file-encrypting ransomware, or cryptoviral extortion, at the 1996 IEEE Security & Privacy conference at Columbia University.</p>
+                    <p>A pivotal theoretical development that profoundly influenced the trajectory of ransomware was the
+                        concept of cryptovirology, introduced by Adam Young and Moti Yung. They presented their
+                        groundbreaking work on file-encrypting ransomware, or cryptoviral extortion, at the 1996 IEEE
+                        Security & Privacy conference at Columbia University.</p>
 
                     <div class="definition-box">
                         <h4>Cryptovirology</h4>
-                        <p>The study of applying cryptographic principles to construct malicious software, exploring how modern cryptographic tools can be leveraged to strengthen and develop new malware attacks.</p>
+                        <p>The study of applying cryptographic principles to construct malicious software, exploring how
+                            modern cryptographic tools can be leveraged to strengthen and develop new malware attacks.
+                        </p>
                     </div>
 
-                    <p>Young and Yung's model outlined a sophisticated three-round protocol for cryptoviral extortion, providing a theoretical blueprint that would later be adopted by real-world ransomware variants:</p>
+                    <p>Young and Yung's model outlined a sophisticated three-round protocol for cryptoviral extortion,
+                        providing a theoretical blueprint that would later be adopted by real-world ransomware variants:
+                    </p>
 
                     <ol>
-                        <li><strong>Attacker to Victim:</strong> The attacker initiates the process by generating a unique key pair (public and private keys). The public key is then secretly embedded within the malware, which is subsequently released, either broadly or targeting specific victims.</li>
-                        <li><strong>Victim to Attacker:</strong> Upon infection, the malware generates a random symmetric key and uses it to encrypt the victim's data. Crucially, this symmetric key is then encrypted using the attacker's public key—a process known as hybrid encryption. To prevent recovery, the malware zeroizes both the symmetric key and the original plaintext data.</li>
-                        <li><strong>Attacker to Victim:</strong> Upon receiving payment, the attacker uses their private key to decrypt the symmetric key and provides it to the victim for data recovery.</li>
+                        <li><strong>Attacker to Victim:</strong> The attacker initiates the process by generating a
+                            unique key pair (public and private keys). The public key is then secretly embedded within
+                            the malware, which is subsequently released, either broadly or targeting specific victims.
+                        </li>
+                        <li><strong>Victim to Attacker:</strong> Upon infection, the malware generates a random
+                            symmetric key and uses it to encrypt the victim's data. Crucially, this symmetric key is
+                            then encrypted using the attacker's public key—a process known as hybrid encryption. To
+                            prevent recovery, the malware zeroizes both the symmetric key and the original plaintext
+                            data.</li>
+                        <li><strong>Attacker to Victim:</strong> Upon receiving payment, the attacker uses their private
+                            key to decrypt the symmetric key and provides it to the victim for data recovery.</li>
                     </ol>
 
                     <h2>The Modern Landscape: Double Extortion and Beyond</h2>
-                    <p>The evolution of ransomware has culminated in the sophisticated double extortion tactics observed today. Modern ransomware operations combine traditional encryption with data exfiltration, creating multiple pressure points for victims. This approach not only encrypts data but also threatens to publicly release sensitive information, adding reputational damage to the operational disruption.</p>
+                    <p>The evolution of ransomware has culminated in the sophisticated double extortion tactics observed
+                        today. Modern ransomware operations combine traditional encryption with data exfiltration,
+                        creating multiple pressure points for victims. This approach not only encrypts data but also
+                        threatens to publicly release sensitive information, adding reputational damage to the
+                        operational disruption.</p>
 
                     <div class="warning-box">
                         <h3>Double Extortion Tactics</h3>
                         <p>Modern ransomware groups employ a two-pronged approach:</p>
                         <ul>
                             <li><strong>Encryption:</strong> Traditional file encryption rendering systems unusable</li>
-                            <li><strong>Exfiltration:</strong> Theft of sensitive data with threats of public disclosure</li>
+                            <li><strong>Exfiltration:</strong> Theft of sensitive data with threats of public disclosure
+                            </li>
                         </ul>
                     </div>
 
                     <h2>Conclusion: The Continuing Evolution</h2>
-                    <p>The evolution of ransomware from the simple AIDS Trojan to modern double extortion represents a fundamental shift in cybercrime sophistication. As organizations strengthen their defenses against traditional encryption-based attacks, threat actors continue to innovate, developing new techniques and business models.</p>
+                    <p>The evolution of ransomware from the simple AIDS Trojan to modern double extortion represents a
+                        fundamental shift in cybercrime sophistication. As organizations strengthen their defenses
+                        against traditional encryption-based attacks, threat actors continue to innovate, developing new
+                        techniques and business models.</p>
 
-                    <p>Understanding this evolution is crucial for cybersecurity professionals developing effective defense strategies. The progression from opportunistic individuals to professional criminal enterprises operating with business-like efficiency demonstrates the need for equally sophisticated defensive measures.</p>
+                    <p>Understanding this evolution is crucial for cybersecurity professionals developing effective
+                        defense strategies. The progression from opportunistic individuals to professional criminal
+                        enterprises operating with business-like efficiency demonstrates the need for equally
+                        sophisticated defensive measures.</p>
 
                     <div class="key-takeaways">
                         <h3>Key Takeaways</h3>
                         <ul>
-                            <li>Ransomware has evolved from simple symmetric encryption to complex hybrid cryptographic systems</li>
+                            <li>Ransomware has evolved from simple symmetric encryption to complex hybrid cryptographic
+                                systems</li>
                             <li>The introduction of cryptocurrency enabled more anonymous payment mechanisms</li>
-                            <li>Double extortion tactics represent the current state-of-the-art in ransomware operations</li>
+                            <li>Double extortion tactics represent the current state-of-the-art in ransomware operations
+                            </li>
                             <li>Continuous evolution requires adaptive defense strategies</li>
                         </ul>
                     </div>
@@ -508,9 +642,11 @@
                     <div class="article-footer">
                         <div class="author-bio">
                             <h4>About the Author</h4>
-                            <p>Dragos Victor is a cybersecurity professional with expertise in threat analysis, vulnerability assessment, and incident response. He holds Google Cybersecurity Professional certification and specializes in analyzing emerging cyber threats.</p>
+                            <p>Dragos Victor is a cybersecurity professional with expertise in threat analysis,
+                                vulnerability assessment, and incident response. He holds Google Cybersecurity
+                                Professional certification and specializes in analyzing emerging cyber threats.</p>
                         </div>
-                        
+
                         <div class="article-actions">
                             <button class="share-btn" onclick="shareArticle()">Share Article</button>
                             <a href="#contact" class="contact-btn">Discuss This Topic</a>
@@ -525,7 +661,8 @@
             <div class="container">
                 <div class="cta-section">
                     <h2>Need Expert Cybersecurity Guidance?</h2>
-                    <p>Let's discuss how these insights can be applied to strengthen your organization's security posture.</p>
+                    <p>Let's discuss how these insights can be applied to strengthen your organization's security
+                        posture.</p>
                     <div class="cta-buttons">
                         <a href="index.html#contact" class="cta-button primary">Get In Touch</a>
                         <a href="projects.html" class="cta-button secondary">View Case Studies</a>
@@ -546,7 +683,8 @@
                 <p>Cybersecurity Professional</p>
                 <p>Maidenhead, UK</p>
                 <p><a href="privacy-policy.html">Privacy Policy</a></p>
-                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p> <!-- Added Cookies Policy link -->
+                <p><a href="privacy-policy.html#cookies-section">Cookies Policy</a></p>
+                <!-- Added Cookies Policy link -->
             </div>
         </div>
         <div class="footer-bottom">
@@ -556,12 +694,12 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7K8YWCQ2P7"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-7K8YWCQ2P7');
     </script>
@@ -569,32 +707,33 @@
     <!-- CookieConsent JS -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
     <script>
-    window.addEventListener("load", function(){
-      if (window.cookieconsent) { // Added check for window.cookieconsent
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#1a2236", /* Dark mode background for popup */
-              "text": "#e3f2fd"       /* Light mode text for popup */
-            },
-            "button": {
-              "background": "#90caf9", /* Light blue for button */
-              "text": "#1a2236"       /* Dark text for button */
+        window.addEventListener("load", function () {
+            if (window.cookieconsent) { // Added check for window.cookieconsent
+                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#1a2236", /* Dark mode background for popup */
+                            "text": "#e3f2fd"       /* Light mode text for popup */
+                        },
+                        "button": {
+                            "background": "#90caf9", /* Light blue for button */
+                            "text": "#1a2236"       /* Dark text for button */
+                        }
+                    },
+                    "theme": "edgeless",
+                    "position": "bottom",
+                    "content": {
+                        "message": "Acest site utilizează cookie-uri pentru a asigura o experiență optimă de navigare. Prin continuarea utilizării site-ului, sunteți de acord cu utilizarea cookie-urilor.",
+                        "dismiss": "Am înțeles!",
+                        "link": "Politica de Confidențialitate",
+                        "href": "privacy-policy.html#cookies-section"
+                    }
+                });
+            } else {
+                console.error("CookieConsent library (window.cookieconsent) is not defined. Cookie consent banner may not display.");
             }
-          },
-          "theme": "edgeless",
-          "position": "bottom",
-          "content": {
-            "message": "Acest site utilizează cookie-uri pentru a asigura o experiență optimă de navigare. Prin continuarea utilizării site-ului, sunteți de acord cu utilizarea cookie-urilor.",
-            "dismiss": "Am înțeles!",
-            "link": "Politica de Confidențialitate",
-            "href": "privacy-policy.html#cookies-section"
-          }
         });
-      } else {
-        console.error("CookieConsent library (window.cookieconsent) is not defined. Cookie consent banner may not display.");
-      }
-    });
     </script>
 </body>
+
 </html>
